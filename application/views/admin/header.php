@@ -13,16 +13,10 @@
 <body>
 	<div class="container">
 		<header>
-	        <h1>¡Bienvenid@ a mi blog!</h1>
-	        <h4>Soy un newbie muy simpático</h4>
+	        
 	    </header>
 	    <nav>
-	        <ul>
-	            <li><a href="<?php echo base_url(); ?>">Inicio</a></li>
-	            <li><a href="<?php echo base_url(); ?>login">Acceso escritores</a></li>
-	            <li><a href="<?php echo base_url(); ?>sobre-mi">Sobre mí</a></li>
-	            <li><a href="<?php echo base_url(); ?>contacto">Contacto</a></li>
-	        </ul>
+	        
 	    </nav>
 	    <div id="wrapper">
 	        <div id="content">

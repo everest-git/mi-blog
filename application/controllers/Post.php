@@ -12,16 +12,16 @@ class Post extends CI_Controller {
 	public function index()
 	{
 
-		$this->load->view('visitor/header');
+		$this->load->view('admin/header');
 		$this->load->view('post/index');
-		$this->load->view('visitor/footer');
+		$this->load->view('admin/footer');
 	}
 
 	public function carga_posts()
 	{
 		if($this->input->is_ajax_request())
 		{
-			$data = $this->Post_model->getAll();	
+			$data = $this->Post_model->getAll();
 			echo json_encode($data);		
 		}
 		else 
@@ -33,13 +33,27 @@ class Post extends CI_Controller {
 		
 	}
 
-	public function view($id)
+	public function get_post()
 	{
-		$data = array('post' => $this->Post_model->get($id));
+		if($this->input->is_ajax_request())
+		{
+			$id_post = $this->input->post('id');
+			$data = $this->Post_model->get_by_id($id_post);
+			echo json_encode($data);		
+		}
+		else 
+		{
+			// Mandar llamar la pagina de error 404
+			//index();
+			show_404();
+		}
+	}
 
-		$this->load->view('visitor/header');
-		$this->load->view('post/view', $data);
-		$this->load->view('visitor/footer');
+	public function details()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('post/details_view');
+		$this->load->view('admin/footer');
 	}
 
 	public function edit($id)

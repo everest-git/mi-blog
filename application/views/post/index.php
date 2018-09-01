@@ -1,3 +1,15 @@
-<h2>Página principal de mi blog, aquí vienen todos los posts:</h2>
-<h3>A continuación se van a cargar los posts</h3>
-<div class="post-cover"></div>
+<h3>Listado de posts</h3>
+<hr>
+<table id="posts" class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Title</th>
+			<th>Friendly url</th>
+			<th>Post</th>
+			<th>Creation date</th>
+			<th>Id user</th>
+		</tr>
+	</thead>
+	<tbody></tbody>
+</table>

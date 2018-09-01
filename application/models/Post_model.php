@@ -11,12 +11,12 @@ class Post_model extends CI_Model {
 
 	public function getAll()
 	{
-		//$sql = "Select * from posts";
-		//return $this->db->query($sql);
-		return $this->db->get('posts')->result();
+		$sql = "Select * from posts";
+		return $this->db->query($sql)->result();
+		//return $this->db->get('posts')->result();
 	}
 
-	public function get($id)
+	public function get_by_id($id)
 	{
 		$sql = "Select * from posts where id = ?";
 		return $this->db->query($sql, array($id))->row();
